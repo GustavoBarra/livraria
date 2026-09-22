@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Livraria Página Viva - livros, e-books e audiobooks.">
+
+    <title>Projeto - Livraria Página Viva</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+<header id="cabecalho">
+    <div class="cabecalho-conteudo">
+
+        <a class="logo" href="#inicio">
+            📚 Livraria Página Viva
+        </a>
+
+        <nav aria-label="Navegação principal">
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#formatos">Formatos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <p class="contador-area">
+            🛒 Carrinho:
+            <span id="contador" aria-live="polite">0</span>
+        </p>
+
+    </div>
+</header>
+
+
+<main id="inicio">
+
+    <!-- CATÁLOGO -->
+    <section id="catalogo" class="catalogo">
+
+        <div class="titulo-secao">
+            <p class="subtitulo">Nossa recomendação</p>
+            <h1>Livro em destaque</h1>
+        </div>
+
+        <article class="card-livro">
+
+            <figure class="capa">
+                <img src="ilustracao_pequeno_principe.png"
+                     alt="Capa do livro O Pequeno Príncipe">
+
+                <figcaption>Edição especial</figcaption>
+            </figure>
+
+            <div class="informacoes-livro">
+
+                <span class="etiqueta">⭐ Mais vendido</span>
+
+                <h2>O Pequeno Príncipe</h2>
+
+                <p class="autor">
+                    Antoine de Saint-Exupéry
+                </p>
+
+                <p class="preco">
+                    R$ 39,90
+                </p>
+
+                <div class="descricao">
+                    <p>
+                        Uma obra clássica que acompanha a jornada
+                        de um pequeno príncipe por diferentes planetas
+                        e encontros marcantes.
+                    </p>
+
+                    <p>
+                        Com uma narrativa simples e cheia de significado,
+                        o livro convida o leitor a refletir sobre amizade,
+                        afeto e sobre aquilo que realmente importa.
+                    </p>
+                </div>
+
+                <button id="btn-adicionar"
+                        class="botao-principal"
+                        type="button">
+                    🛒 Adicionar ao carrinho
+                </button>
+
+                <div class="area-carrinho">
+                    <h3>Itens no carrinho</h3>
+                    <ul id="carrinho" aria-live="polite"></ul>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- DESTAQUES -->
+    <section class="destaques"
+             aria-labelledby="titulo-destaques">
+
+        <div class="titulo-secao">
+            <p class="subtitulo">Por que comprar conosco?</p>
+            <h2 id="titulo-destaques">Destaques do livro</h2>
+        </div>
+
+        <ul class="lista-destaques">
+
+            <li class="destaque">
+                <span>📖</span>
+                <strong>Capa dura</strong>
+                <p>Acabamento especial e resistente.</p>
+            </li>
+
+            <li class="destaque">
+                <span>🚚</span>
+                <strong>Frete grátis</strong>
+                <p>Receba seu pedido sem custo adicional.</p>
+            </li>
+
+            <li class="destaque">
+                <span>⚡</span>
+                <strong>Entrega em 24h</strong>
+                <p>Agilidade para receber seu livro.</p>
+            </li>
+
+            <li class="destaque">
+                <span>✨</span>
+                <strong>Edição especial</strong>
+                <p>Uma edição diferenciada para colecionadores.</p>
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- FORMATOS -->
+    <section id="formatos"
+             class="formatos"
+             aria-labelledby="titulo-formatos">
+
+        <div class="titulo-secao">
+            <p class="subtitulo">Escolha como ler</p>
+            <h2 id="titulo-formatos">Formatos disponíveis</h2>
+        </div>
+
+        <div class="grade-formatos">
+
+            <article class="card-formato">
+                <span class="icone-formato">📚</span>
+                <h3>Físico</h3>
+                <p class="preco-formato">R$ 39,90</p>
+                <p>Prazo: 2 a 5 dias</p>
+                <button type="button">Escolher</button>
+            </article>
+
+            <article class="card-formato">
+                <span class="icone-formato">📱</span>
+                <h3>E-book</h3>
+                <p class="preco-formato">R$ 19,90</p>
+                <p>Prazo: imediato</p>
+                <button type="button">Escolher</button>
+            </article>
+
+            <article class="card-formato">
+                <span class="icone-formato">🎧</span>
+                <h3>Audiobook</h3>
+                <p class="preco-formato">R$ 24,90</p>
+                <p>Prazo: imediato</p>
+                <button type="button">Escolher</button>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+    <section id="sobre"
+             class="destaques"
+             aria-labelledby="titulo-sobre">
+
+        <div class="titulo-secao">
+            <p class="subtitulo">Conheça nosso projeto</p>
+            <h2 id="titulo-sobre">Sobre a Livraria Página Viva</h2>
+        </div>
+
+        <article class="card-livro">
+
+            <figure class="capa">
+               <img src="ilustracao_pequeno_principe.png" 
+                alt="Capa ilustrativa do livro O Pequeno Príncipe">
+            </figure>
+
+            <div class="informacoes-livro">
+                <h2>Uma livraria feita para quem ama histórias</h2>
+
+                <p>
+                    A Livraria Página Viva é um projeto de página web
+                    desenvolvido para apresentar um livro em destaque,
+                    seus formatos disponíveis e informações de contato.
+                </p>
+
+                <p>
+                    O projeto utiliza HTML para estruturar o conteúdo,
+                    CSS para criar a apresentação visual e JavaScript
+                    para adicionar uma interação simples com o carrinho.
+                </p>
+
+                <p>
+                    A proposta é proporcionar uma navegação simples,
+                    organizada e agradável para o usuário.
+                </p>
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- CONTATO -->
+    <section id="contato"
+             class="contato"
+             aria-labelledby="titulo-contato">
+
+        <div class="titulo-secao">
+            <p class="subtitulo">Fale conosco</p>
+            <h2 id="titulo-contato">Entre em contato</h2>
+            <p>
+                Preencha o formulário abaixo e entraremos em contato.
+            </p>
+        </div>
+
+        <form id="form-contato">
+
+            <div class="campo">
+                <label for="nome">Nome:</label>
+
+                <input type="text"
+                       id="nome"
+                       name="nome"
+                       placeholder="Digite seu nome"
+                       autocomplete="name"
+                       required>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail:</label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="exemplo@email.com"
+                       autocomplete="email"
+                       required>
+            </div>
+
+            <fieldset>
+                <legend>Preferência de contato:</legend>
+
+                <div class="opcoes-contato">
+
+                    <label for="contato-email">
+                        <input type="radio"
+                               id="contato-email"
+                               name="preferencia"
+                               value="email"
+                               checked>
+                        E-mail
+                    </label>
+
+                    <label for="contato-telefone">
+                        <input type="radio"
+                               id="contato-telefone"
+                               name="preferencia"
+                               value="telefone">
+                        Telefone
+                    </label>
+
+                </div>
+            </fieldset>
+
+            <div class="campo checkbox">
+
+                <input type="checkbox"
+                       id="novidades"
+                       name="novidades">
+
+                <label for="novidades">
+                    Aceito receber novidades por e-mail
+                </label>
+
+            </div>
+
+            <div class="campo">
+
+                <label for="senha">
+                    Crie uma senha para acompanhar seu pedido:
+                </label>
+
+                <input type="password"
+                       id="senha"
+                       name="senha"
+                       placeholder="Digite uma senha"
+                       minlength="6"
+                       autocomplete="new-password"
+                       required>
+
+            </div>
+
+            <button class="botao-enviar"
+                    type="submit">
+                Enviar mensagem
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="rodape-conteudo">
+
+        <div>
+            <h2>📚 Livraria Página Viva</h2>
+
+            <p>
+                Histórias que continuam vivas em cada página.
+            </p>
+        </div>
+
+        <div>
+            <h3>Contato</h3>
+
+            <p>
+                E-mail: contato@paginaviva.com
+            </p>
+        </div>
+
+    </div>
+
+    <div class="rodape-final">
+        <p>
+            &copy; 2026 Livraria Página Viva.
+            Todos os direitos reservados.
+        </p>
+    </div>
+
+</footer>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

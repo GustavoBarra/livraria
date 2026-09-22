@@ -1,0 +1,519 @@
+/* =========================
+           ESTILO GERAL
+           ========================= */
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f3ef;
+            color: #252525;
+            line-height: 1.6;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            border: 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.08);
+        }
+
+        /* =========================
+           CABEÇALHO
+           ========================= */
+
+        #cabecalho {
+            background: #3b255c;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .cabecalho-conteudo {
+            width: 92%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .menu {
+            display: flex;
+            gap: 1.4rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu a {
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .menu a:hover {
+            color: #ffd166;
+        }
+
+        .contador-area {
+            margin: 0;
+            white-space: nowrap;
+            background: rgba(255,255,255,0.12);
+            padding: 0.5rem 0.8rem;
+            border-radius: 20px;
+        }
+
+        #contador {
+            font-weight: bold;
+            color: #ffd166;
+        }
+
+        /* =========================
+           CONTEÚDO
+           ========================= */
+
+        main {
+            width: 92%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        .catalogo {
+            padding: 3.5rem 0 1.5rem;
+        }
+
+        .titulo-secao {
+            margin-bottom: 1.5rem;
+        }
+
+        .subtitulo {
+            color: #6c4aa1;
+            text-transform: uppercase;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.3rem;
+        }
+
+        h1,
+        h2 {
+            color: #2d2043;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin: 0.4rem 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        /* =========================
+           LIVRO
+           ========================= */
+
+        .card-livro {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .capa {
+            flex: 0 1 35%;
+            margin: 0;
+            text-align: center;
+        }
+
+        .capa img {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+        }
+
+        .capa figcaption {
+            margin-top: 0.6rem;
+            color: #777;
+            font-size: 0.85rem;
+        }
+
+        .informacoes-livro {
+            flex: 1;
+        }
+
+        .etiqueta {
+            display: inline-block;
+            color: #6c4aa1;
+            background: #eee8f7;
+            padding: 0.35rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .informacoes-livro h2 {
+            font-size: 2.3rem;
+            margin: 0.7rem 0 0.2rem;
+        }
+
+        .autor {
+            font-weight: 700;
+            color: #555;
+        }
+
+        .preco {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #3b255c;
+            margin: 0.8rem 0;
+        }
+
+        .descricao {
+            color: #555;
+            max-width: 650px;
+        }
+
+        .botao-principal,
+        .botao-enviar {
+            background: #3b255c;
+            color: white;
+            padding: 0.95rem 1.4rem;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .area-carrinho {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e1e8;
+        }
+
+        .area-carrinho h3 {
+            margin: 0 0 0.5rem;
+            color: #2d2043;
+        }
+
+        #carrinho {
+            min-height: 1.5rem;
+            padding-left: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        #carrinho li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* =========================
+           DESTAQUES
+           ========================= */
+
+        .destaques,
+        .formatos,
+        .contato {
+            padding: 2.5rem 0;
+        }
+
+        .lista-destaques {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            padding: 0;
+            list-style: none;
+        }
+
+        .destaque {
+            background: white;
+            border-radius: 12px;
+            padding: 1.2rem;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+        }
+
+        .destaque span {
+            display: block;
+            font-size: 1.7rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .destaque strong {
+            color: #3b255c;
+        }
+
+        .destaque p {
+            margin: 0.3rem 0 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           FORMATOS
+           ========================= */
+
+        .grade-formatos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .card-formato {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .card-formato:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .icone-formato {
+            font-size: 2rem;
+        }
+
+        .card-formato h3 {
+            margin: 0.5rem 0;
+            color: #2d2043;
+        }
+
+        .preco-formato {
+            color: #3b255c;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .card-formato button {
+            background: #eee8f7;
+            color: #3b255c;
+            font-weight: 700;
+            padding: 0.65rem 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* =========================
+           CONTATO
+           ========================= */
+
+        .contato {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        form {
+            background: white;
+            padding: 1.7rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.85rem;
+            border: 1px solid #bbb;
+            border-radius: 7px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #6c4aa1;
+            box-shadow: 0 0 0 3px rgba(108,74,161,0.12);
+        }
+
+        fieldset {
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .opcoes-contato {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .opcoes-contato label {
+            font-weight: normal;
+        }
+
+        .checkbox {
+            flex-direction: row;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox label {
+            font-weight: normal;
+        }
+
+        /* =========================
+           RODAPÉ
+           ========================= */
+
+        footer {
+            margin-top: 2rem;
+            padding: 2.5rem 4% 1rem;
+            background: #241837;
+            color: white;
+        }
+
+        .rodape-conteudo {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .rodape-conteudo h2,
+        .rodape-conteudo h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .rodape-conteudo p {
+            color: #ddd;
+        }
+
+        .rodape-final {
+            max-width: 1100px;
+            margin: 1.5rem auto 0;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            text-align: center;
+            font-size: 0.85rem;
+            color: #bbb;
+        }
+
+        /* =========================
+           RESPONSIVIDADE
+           ========================= */
+
+        @media (max-width: 800px) {
+            .cabecalho-conteudo {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .card-livro {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .capa {
+                width: 100%;
+            }
+
+            .descricao {
+                margin: 0 auto;
+            }
+
+            .lista-destaques {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grade-formatos {
+                grid-template-columns: 1fr;
+            }
+
+            .rodape-conteudo {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.8rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.15rem;
+            }
+
+            .contador-area {
+                font-size: 0.9rem;
+            }
+
+            .card-livro {
+                padding: 1.3rem;
+            }
+
+            .informacoes-livro h2 {
+                font-size: 1.8rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .lista-destaques {
+                grid-template-columns: 1fr;
+            }
+
+            .opcoes-contato {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+        }

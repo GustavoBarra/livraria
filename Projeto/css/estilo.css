@@ -1,0 +1,286 @@
+/* Seletor de elemento: define o estilo base do texto e da página. */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f3ef;
+    color: #252525;
+    line-height: 1.6;
+}
+
+/* Seletor de elemento. */
+p {
+    margin-top: 0;
+}
+
+/* Seletor de ID: aplicado a um único elemento específico. */
+#cabecalho {
+    background: #3b255c;
+    color: white;
+}
+
+/* Flexbox no menu: ele organiza os itens em uma única dimensão horizontal. */
+.menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Seletor de classe: aplicado a mais de um elemento. */
+.destaque {
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem;
+}
+
+/* Seletor de classe para elementos reutilizados. */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+}
+
+/* Pseudo-classe :hover nos links do menu. */
+.menu a:hover {
+    color: #ffd166;
+}
+
+/* Pseudo-classe :hover no botão. */
+#btn-adicionar:hover,
+.botao-enviar:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+/*
+Experimento de especificidade:
+a mesma propriedade é definida por uma classe e por um ID.
+A regra do ID vence porque um ID tem especificidade maior que uma classe.
+Se a cor da classe tivesse !important, ela venceria essa disputa normal de especificidade.
+*/
+.experimento {
+    background: #eeeeee;
+}
+
+#cabecalho {
+    background: #3b255c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cabecalho-conteudo {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.contador-area {
+    margin: 0;
+    white-space: nowrap;
+}
+
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.catalogo {
+    padding: 3rem 0 1rem;
+}
+
+/*
+Para o cartão do livro, Flexbox é adequado porque os elementos podem ser
+organizados em duas partes (capa e informações) e facilmente empilhados no celular.
+*/
+.card-livro {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.capa {
+    flex: 0 1 35%;
+    margin: 0;
+}
+
+.capa img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 0.6rem;
+}
+
+.informacoes-livro {
+    flex: 1;
+}
+
+.etiqueta {
+    color: #6c4aa1;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin: 0.4rem 0;
+}
+
+.autor {
+    font-weight: 700;
+}
+
+.preco {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #3b255c;
+}
+
+button {
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+#btn-adicionar,
+.botao-enviar {
+    background: #3b255c;
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+#carrinho {
+    min-height: 1.5rem;
+    padding-left: 1.2rem;
+}
+
+.destaques,
+.formatos,
+.contato {
+    padding: 2rem 0;
+}
+
+.lista-destaques {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+/*
+Grid é a escolha mais direta para os formatos porque precisamos de
+uma grade em duas dimensões, com linhas e colunas de cartões.
+*/
+.grade-formatos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card-formato {
+    background: white;
+    padding: 1.3rem;
+    border-radius: 0.7rem;
+    border: 1px solid #ddd;
+}
+
+.card-formato h3 {
+    margin-top: 0;
+}
+
+form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #bbb;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+
+fieldset {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.checkbox {
+    flex-direction: row;
+    align-items: center;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 2rem 4%;
+    background: #241837;
+    color: white;
+    text-align: center;
+}
+
+/* Responsividade: em telas menores o cartão empilha seus elementos. */
+@media (max-width: 600px) {
+    .cabecalho-conteudo {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-livro {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .capa {
+        width: 100%;
+    }
+
+    .grade-formatos {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .lista-destaques {
+        flex-direction: column;
+    }
+}

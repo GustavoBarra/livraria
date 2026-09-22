@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Livraria Página Viva</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="cabecalho-conteudo">
+            <a class="logo" href="#">Livraria Página Viva</a>
+
+            <nav aria-label="Navegação principal">
+                <ul class="menu">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <p class="contador-area">Carrinho: <span id="contador">0</span></p>
+        </div>
+    </header>
+
+    <main>
+        <section id="catalogo" class="catalogo">
+            <article class="card-livro">
+                <figure class="capa">
+                    <img src="imagens/capa-livro.png"
+                         alt="Capa ilustrativa do livro O Pequeno Príncipe">
+                </figure>
+
+                <div class="informacoes-livro">
+                    <p class="etiqueta">Livro em destaque</p>
+                    <h1>O Pequeno Príncipe</h1>
+                    <p class="autor">Antoine de Saint-Exupéry</p>
+                    <p class="preco">R$ 39,90</p>
+
+                    <p>
+                        Uma obra clássica que acompanha a jornada de um pequeno
+                        príncipe por diferentes planetas e encontros marcantes.
+                    </p>
+                    <p>
+                        Com uma narrativa simples e cheia de significado, o livro
+                        convida o leitor a refletir sobre amizade, afeto e sobre
+                        aquilo que realmente importa.
+                    </p>
+
+                    <button id="btn-adicionar" type="button">
+                        Adicionar ao carrinho
+                    </button>
+
+                    <h2>Itens no carrinho</h2>
+                    <ul id="carrinho"></ul>
+                </div>
+            </article>
+        </section>
+
+        <section class="destaques" aria-labelledby="titulo-destaques">
+            <h2 id="titulo-destaques">Destaques do livro</h2>
+            <ul class="lista-destaques">
+                <li class="destaque">Capa dura</li>
+                <li class="destaque">Frete grátis</li>
+                <li class="destaque">Entrega em 24h</li>
+                <li class="destaque">Edição especial</li>
+            </ul>
+        </section>
+
+        <section class="formatos" aria-labelledby="titulo-formatos">
+            <h2 id="titulo-formatos">Formatos disponíveis</h2>
+
+            <div class="grade-formatos">
+                <article class="card-formato">
+                    <h3>Físico</h3>
+                    <p>R$ 39,90</p>
+                    <p>Prazo: 2 a 5 dias</p>
+                </article>
+
+                <article class="card-formato">
+                    <h3>E-book</h3>
+                    <p>R$ 19,90</p>
+                    <p>Prazo: imediato</p>
+                </article>
+
+                <article class="card-formato">
+                    <h3>Audiobook</h3>
+                    <p>R$ 24,90</p>
+                    <p>Prazo: imediato</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato" class="contato">
+            <h2>Entre em contato</h2>
+
+            <form>
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <fieldset>
+                    <legend>Preferência de contato:</legend>
+
+                    <label for="contato-email">
+                        <input type="radio" id="contato-email"
+                               name="preferencia" value="email" checked>
+                        E-mail
+                    </label>
+
+                    <label for="contato-telefone">
+                        <input type="radio" id="contato-telefone"
+                               name="preferencia" value="telefone">
+                        Telefone
+                    </label>
+                </fieldset>
+
+                <div class="campo checkbox">
+                    <input type="checkbox" id="novidades" name="novidades">
+                    <label for="novidades">Aceito receber novidades por e-mail</label>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Crie uma senha para acompanhar seu pedido:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+
+                <button class="botao-enviar" type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Livraria Página Viva</p>
+        <p>E-mail: contato@paginaviva.com</p>
+    </footer>
+
+    <!--
+    Justificativa das tags semânticas:
+    header: representa o cabeçalho introdutório da página e reúne a identidade da livraria e sua navegação.
+    nav: identifica especificamente o conjunto de links usado para a navegação principal.
+    main: delimita o conteúdo principal e único desta página, separando-o do cabeçalho e rodapé.
+    article/section: article representa o conteúdo independente do livro; section agrupa partes relacionadas,
+    como catálogo, formatos e contato, dando significado à organização do conteúdo.
+    footer: representa o rodapé da página, contendo informações finais de identificação e contato.
+    -->
+    <script src="js/script.js"></script>
+</body>
+</html>
